@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "SendHerePlz",
+  "description": "Check if Amazon sends to your address from the list of products",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.es/*"],
+      "js": ["jquery-3.4.1.min.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_icon": "img/sendhereplz-logo.png"
+  },
+  "icons": {
+    "128": "img/sendhereplz-logo.png"
+  }
+}
