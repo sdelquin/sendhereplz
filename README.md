@@ -8,7 +8,7 @@ This is a _Chrome Extension_ to identify non-eligible products on **Amazon** bec
 
 ![Screen capture of the extension in use](img/screen-capture.png)
 
-This project is a fork from the original _SendHerePlz_ project developed by **Micael Martín** at [Desarrollo Cometa](https://desarrollocometa.com):
+This project is a fork from the original _SendHerePlz_ project developed by Micael Martín ([@micaelcometa](https://github.com/micaelcometa)) at [Desarrollo Cometa](https://desarrollocometa.com):
 
 ![Desarrollo Cometa](img/cometa-logo.png)
 
@@ -24,6 +24,10 @@ This project is a fork from the original _SendHerePlz_ project developed by **Mi
 
 ## Usage
 
-Now you can browse in Amazon, search for your dreamy products and check quickly those who are not beign sent to your location.
+Now you can browse in Amazon, search for your dreamy products and check quickly those which are not being sent to your location.
 
 ![Happy momento](https://media.giphy.com/media/WsKVAem02Efuw/giphy.gif)
+
+## Disclaimer
+
+Currently the extension only works for amazon.es because the checked messages are only in Spanish. It can be extended for other languages/countries.
