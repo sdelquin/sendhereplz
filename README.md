@@ -1,1 +1,27 @@
-# sendhereplz
+# Send here please!
+
+This is a _Chrome Extension_ to identify non-eligible products on **Amazon** because they are not sent to some locations. In this case, we live at [Canary Islands](https://en.wikipedia.org/wiki/Canary_Islands) and unfortunately there are a lot of Amazon products that they do not send here. Furthermore there is no choice to filter those products which are eligible.
+
+> This extension provides a way to highlight and cross out the non-eligible products for sending reasons.
+
+![Screen capture of the extension in use](img/screen-capture.png)
+
+This project is a fork from the original _SendHerePlz_ project developed by **Micael Martín** at [Desarrollo Cometa](https://desarrollocometa.com):
+
+![Desarrollo Cometa](img/logo-cometa.png)
+
+## Installation
+
+- [Download](https://github.com/sdelquin/sendhereplz/archive/master.zip) the project.
+- Uncompress the `.zip` file (a folder named `sendhereplz-master` is created).
+- Place the folder where you want to keep it (write down this location).
+- Open [Chrome](https://www.google.com/intl/es_es/chrome/) browser.
+- Go to `chrome://extensions/` on navigation bar.
+- Click on <kbd>Load unpacked</kbd>. (_"Cargar descomprimida"_ in spanish)
+- Select the folder from the location where the extension was saved.
+
+## Usage
+
+Now you can browse in Amazon, search for your dreamy products and check quickly those who are not beign sent to your location.
+
+![Happy momento](https://media.giphy.com/media/WsKVAem02Efuw/giphy.gif)
