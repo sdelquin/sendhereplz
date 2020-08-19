@@ -14,13 +14,20 @@ This project is a fork from the original _SendHerePlz_ project developed by Mica
 
 ## Installation
 
+### Developer mode
+
 - [Download](https://github.com/sdelquin/sendhereplz/archive/master.zip) the project.
 - Uncompress the `.zip` file (a folder named `sendhereplz-master` is created).
 - Place the folder where you want to keep it (write down this location).
 - Open [Chrome](https://www.google.com/intl/es_es/chrome/) browser.
 - Go to `chrome://extensions/` on navigation bar.
-- Click on <kbd>Load unpacked</kbd>. (_"Cargar descomprimida"_ in spanish)
+- Check the box for **Developer Mode** in the top right. (_"Modo desarrollador"_ in spanish)
+- Click on **Load unpacked**. (_"Cargar descomprimida"_ in spanish)
 - Select the folder from the location where the extension was saved.
+
+### Chrome Web Store
+
+Shortly.
 
 ## Usage
 
@@ -32,8 +39,8 @@ Now you can browse in Amazon, search for your dreamy products and check quickly 
 
 Currently the extension only works for:
 
-- [amazon.es](https://amazon.es) 
-- [amazon.com](https://amazon.com) 
-- [amazon.it](https://amazon.it) 
+- [amazon.es](https://amazon.es)
+- [amazon.com](https://amazon.com)
+- [amazon.it](https://amazon.it)
 
 It can be extended for other languages/countries.
