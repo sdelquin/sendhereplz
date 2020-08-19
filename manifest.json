@@ -5,7 +5,11 @@
   "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["https://www.amazon.es/*"],
+      "matches": [
+        "https://www.amazon.es/*",
+        "https://www.amazon.com/*",
+        "https://www.amazon.it/*"
+      ],
       "js": ["content.js"],
       "run_at": "document_end"
     }
