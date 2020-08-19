@@ -8,6 +8,8 @@ $(function () {
     'no realiza envíos a',
     'Disponible a través de',
     'no puede enviarse',
+    'cannot be shipped',
+    'non può essere spedito',
   ]
   let notDeliverStyle = 'color: #f56c42 !important; text-decoration: line-through !important;'
 

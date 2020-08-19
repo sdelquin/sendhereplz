@@ -30,4 +30,10 @@ Now you can browse in Amazon, search for your dreamy products and check quickly 
 
 ## Disclaimer
 
-Currently the extension only works for [amazon.es](https://amazon.es) because the checked messages are only in Spanish. It can be extended for other languages/countries.
+Currently the extension only works for:
+
+- [amazon.es](https://amazon.es) 
+- [amazon.com](https://amazon.com) 
+- [amazon.it](https://amazon.it) 
+
+It can be extended for other languages/countries.
