@@ -10,7 +10,7 @@
         "https://www.amazon.com/*",
         "https://www.amazon.it/*"
       ],
-      "js": ["jquery-3.4.1.min.js", "content.js"],
+      "js": ["content.js"],
       "run_at": "document_end"
     }
   ],
