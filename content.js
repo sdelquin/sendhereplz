@@ -27,31 +27,26 @@
   function checkProducts() {
     console.log('SendHerePlz is making its magic...')
 
-    document.querySelectorAll(targetProducts.toString()).forEach(function (theLink) {
-      fetch(theLink.getAttribute('href'))
-        .then(function (response) {
-          return response.text()
-        })
-        .then(function (data) {
-          for (i = 0; i < notDeliverMessages.length; i++) {
-            if (data.search(notDeliverMessages[i]) != -1) {
-              theLink.querySelectorAll('span').forEach(function (span) {
-                span.setAttribute('style', notDeliverStyle)
-              })
-              break
-            }
+    document.querySelectorAll(targetProducts.toString()).forEach(productLink => {
+      fetch(productLink.getAttribute('href'))
+        .then(response => response.text())
+        .then(data => {
+          const isNotDeliverable = notDeliverMessages.some(message => data.includes(message))
+          if (isNotDeliverable) {
+            const productTitle = productLink.querySelector('span')
+            productTitle.setAttribute('style', notDeliverStyle)
           }
         })
     })
   }
 
   function observeNewProducts() {
-    const resultLoaderNodes = document.getElementsByClassName('s-result-list-placeholder')
-    if (resultLoaderNodes.length > 0) {
-      const observer = new MutationObserver(function (_) {
+    const resultsLoader = document.getElementsByClassName('s-result-list-placeholder')[0]
+    if (resultsLoader) {
+      const observer = new MutationObserver((_) => {
         checkProducts()
       })
-      observer.observe(resultLoaderNodes[0], { attributes: true })
+      observer.observe(resultsLoader, { attributes: true })
     }
   }
 })()
