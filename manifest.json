@@ -10,6 +10,7 @@
         "https://www.amazon.com/*",
         "https://www.amazon.it/*"
       ],
+      "css": ["loader.css"],
       "js": ["content.js"],
       "run_at": "document_end"
     }

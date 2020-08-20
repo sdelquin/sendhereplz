@@ -24,10 +24,24 @@
     }
   }
 
+  function createLoader() {
+    const loader = document.createElement('span')
+
+    loader.classList.add('shp-loader')
+    loader.innerText = 'Loading...'
+
+    return loader
+  }
+
   function checkProducts() {
     console.log('SendHerePlz is making its magic...')
 
     document.querySelectorAll(targetProducts.toString()).forEach(productLink => {
+      const loader = createLoader()
+      const removeLoader = () => loader.remove()
+
+      productLink.parentElement.prepend(loader)
+
       fetch(productLink.getAttribute('href'))
         .then(response => response.text())
         .then(data => {
@@ -37,6 +51,8 @@
             productTitle.setAttribute('style', notDeliverStyle)
           }
         })
+        .then(removeLoader)
+        .catch(removeLoader)
     })
   }
 
