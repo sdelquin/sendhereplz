@@ -1,0 +1,49 @@
+.shp-loader {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 2px;
+  text-indent: -9999em;
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  background: #f56c42;
+  background: linear-gradient(to right, #f56c42 10%, rgba(245, 108, 66, 0) 42%);
+  position: relative;
+  animation: shp-load 1.4s infinite linear;
+  transform: translateZ(0);
+}
+
+.shp-loader:before,
+.shp-loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.shp-loader:before {
+  width: 50%;
+  height: 50%;
+  background: #f56c42;
+  border-radius: 100% 0 0 0;
+}
+
+.shp-loader:after {
+  width: 75%;
+  height: 75%;
+  background: #fff;
+  border-radius: 50%;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes shp-load {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
