@@ -1,6 +1,6 @@
 # Send here please!
 
-![Logo SendHerePlz](img/sendhereplz-logo.png)
+[![Logo SendHerePlz](img/sendhereplz-logo-128.png)](img/sendhereplz-logo.png)
 
 This is a _Chrome Extension_ to identify non-eligible products on **Amazon** because they are not sent to some locations. In this case, we live at [Canary Islands](https://en.wikipedia.org/wiki/Canary_Islands) and unfortunately there are a lot of Amazon products that they do not send here. Furthermore there is no choice to filter those products which are eligible.
 
