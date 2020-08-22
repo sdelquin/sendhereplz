@@ -1,7 +1,6 @@
 (function () {
   const parser = new DOMParser()
   const targetProducts = ['h2 a.a-link-normal.a-text-normal']
-  const notDeliverStyle = 'color: #f56c42 !important; text-decoration: line-through !important;'
 
   ready(function () {
     checkProducts()
@@ -41,11 +40,16 @@
 
           if (!isProductDeliverable(productPage)) {
             const productTitle = productLink.querySelector('span')
-            productTitle.setAttribute('style', notDeliverStyle)
+            productTitle.classList.add('shp-not-deliverable-product')
+          }
+
+          const availableFromOtherSellers = getAvailableFromOtherSellers(productPage)
+          if (availableFromOtherSellers) {
+            const sellersMessage = createSellersMessage(availableFromOtherSellers.innerHTML)
+            productLink.parentElement.parentElement.after(sellersMessage)
           }
         })
-        .then(removeLoader)
-        .catch(removeLoader)
+        .finally(removeLoader)
     })
   }
 
@@ -54,6 +58,18 @@
       #ddmDeliveryMessage .a-color-error,
       #deliveryMessageMirId .a-color-error
     `)
+  }
+
+  function getAvailableFromOtherSellers(page) {
+    return page.querySelector('#availability .a-declarative[data-action="show-all-offers-display"]')
+  }
+
+  function createSellersMessage(content) {
+    const element = document.createElement('div')
+    element.classList.add('shp-sellers-message')
+    element.innerHTML = content
+
+    return element
   }
 
   function observeNewProducts() {

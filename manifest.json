@@ -7,7 +7,7 @@
     {
       "matches": ["https://*/*"],
       "include_globs": ["https://www.amazon.*/*"],
-      "css": ["loader.css"],
+      "css": ["styles/loader.css", "styles/products.css"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
