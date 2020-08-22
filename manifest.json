@@ -5,7 +5,8 @@
   "version": "1.3",
   "content_scripts": [
     {
-      "matches": ["https://www.amazon.es/*", "https://www.amazon.com/*", "https://www.amazon.it/*"],
+      "matches": ["https://*/*"],
+      "include_globs": ["https://www.amazon.*/*"],
       "css": ["loader.css"],
       "js": ["content.js"],
       "run_at": "document_end"
