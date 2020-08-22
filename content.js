@@ -49,7 +49,7 @@
           const isNotDeliverable = notDeliverMessages.some(message => data.includes(message))
           if (isNotDeliverable) {
             const productTitle = productLink.querySelector('span')
-            productTitle.classList.add('not-deliverable-product')
+            productTitle.classList.add('shp-not-deliverable-product')
           }
 
           const availableFromOtherSellers = getAvailableFromOtherSellers(productPage)
@@ -68,7 +68,7 @@
 
   function createSellersMessage(content) {
     const element = document.createElement('div')
-    element.classList.add('sellers-message')
+    element.classList.add('shp-sellers-message')
     element.innerHTML = content
 
     return element
