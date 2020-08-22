@@ -1,14 +1,6 @@
 (function () {
+  const parser = new DOMParser()
   const targetProducts = ['h2 a.a-link-normal.a-text-normal']
-  const notDeliverMessages = [
-    'no puede ser enviado',
-    'no hay vendedores que realicen envíos a',
-    'no realiza envíos a',
-    'Disponible a través de',
-    'no puede enviarse',
-    'cannot be shipped',
-    'non può essere spedito',
-  ]
   const notDeliverStyle = 'color: #f56c42 !important; text-decoration: line-through !important;'
 
   ready(function () {
@@ -45,8 +37,9 @@
       fetch(productLink.getAttribute('href'))
         .then(response => response.text())
         .then(data => {
-          const isNotDeliverable = notDeliverMessages.some(message => data.includes(message))
-          if (isNotDeliverable) {
+          const productPage = parser.parseFromString(data, 'text/html')
+
+          if (!isProductDeliverable(productPage)) {
             const productTitle = productLink.querySelector('span')
             productTitle.setAttribute('style', notDeliverStyle)
           }
@@ -54,6 +47,13 @@
         .then(removeLoader)
         .catch(removeLoader)
     })
+  }
+
+  function isProductDeliverable(page) {
+    return !page.querySelector(`
+      #ddmDeliveryMessage .a-color-error,
+      #deliveryMessageMirId .a-color-error
+    `)
   }
 
   function observeNewProducts() {
