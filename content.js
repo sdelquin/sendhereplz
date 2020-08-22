@@ -1,6 +1,5 @@
 (function () {
   const parser = new DOMParser()
-  const targetProducts = ['h2 a.a-link-normal.a-text-normal']
 
   ready(function () {
     checkProducts()
@@ -15,22 +14,11 @@
     }
   }
 
-  function createLoader() {
-    const loader = document.createElement('span')
-
-    loader.classList.add('shp-loader')
-    loader.innerText = 'Loading...'
-
-    return loader
-  }
-
   function checkProducts() {
     console.log('SendHerePlz is making its magic...')
 
-    document.querySelectorAll(targetProducts.toString()).forEach(productLink => {
+    getProductLinks().forEach(productLink => {
       const loader = createLoader()
-      const removeLoader = () => loader.remove()
-
       productLink.parentElement.prepend(loader)
 
       fetch(productLink.getAttribute('href'))
@@ -49,8 +37,21 @@
             productLink.parentElement.parentElement.after(sellersMessage)
           }
         })
-        .finally(removeLoader)
+        .finally(() => loader.remove())
     })
+  }
+
+  function getProductLinks() {
+    return document.querySelectorAll('h2 a.a-link-normal.a-text-normal')
+  }
+
+  function createLoader() {
+    const loader = document.createElement('span')
+
+    loader.classList.add('shp-loader')
+    loader.innerText = 'Loading...'
+
+    return loader
   }
 
   function isProductDeliverable(page) {
