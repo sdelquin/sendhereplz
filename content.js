@@ -4,12 +4,11 @@
     'no puede ser enviado',
     'no hay vendedores que realicen envíos a',
     'no realiza envíos a',
-    'Disponible a través de',
     'no puede enviarse',
     'cannot be shipped',
     'non può essere spedito',
   ]
-  const notDeliverStyle = 'color: #f56c42 !important; text-decoration: line-through !important;'
+  const parser = new DOMParser()
 
   ready(function () {
     checkProducts()
@@ -45,15 +44,34 @@
       fetch(productLink.getAttribute('href'))
         .then(response => response.text())
         .then(data => {
+          const productPage = parser.parseFromString(data, 'text/html')
+
           const isNotDeliverable = notDeliverMessages.some(message => data.includes(message))
           if (isNotDeliverable) {
             const productTitle = productLink.querySelector('span')
-            productTitle.setAttribute('style', notDeliverStyle)
+            productTitle.classList.add('not-deliverable-product')
+          }
+
+          const availableFromOtherSellers = getAvailableFromOtherSellers(productPage)
+          if (availableFromOtherSellers) {
+            const sellersMessage = createSellersMessage(availableFromOtherSellers.innerHTML)
+            productLink.parentElement.parentElement.after(sellersMessage)
           }
         })
-        .then(removeLoader)
-        .catch(removeLoader)
+        .finally(removeLoader)
     })
+  }
+
+  function getAvailableFromOtherSellers(page) {
+    return page.querySelector('#availability .a-declarative[data-action="show-all-offers-display"]')
+  }
+
+  function createSellersMessage(content) {
+    const element = document.createElement('div')
+    element.classList.add('sellers-message')
+    element.innerHTML = content
+
+    return element
   }
 
   function observeNewProducts() {
