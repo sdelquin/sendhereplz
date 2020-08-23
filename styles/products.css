@@ -1,6 +1,10 @@
-h2 .shp-not-deliverable-product {
-  color: #f56c42 !important;
-  text-decoration: line-through !important;
+.shp-not-deliverable-product {
+  opacity: 0.35;
+  transition: opacity 0.15s;
+}
+
+.shp-not-deliverable-product:hover {
+  opacity: 1;
 }
 
 .shp-sellers-message {

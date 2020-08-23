@@ -18,8 +18,10 @@
     console.log('SendHerePlz is making its magic...')
 
     getProductLinks().forEach(productLink => {
+      const productTitle = productLink.closest('h2')
+
       const loader = createLoader()
-      productLink.parentElement.prepend(loader)
+      productTitle.prepend(loader)
 
       fetch(productLink.getAttribute('href'))
         .then(response => response.text())
@@ -27,14 +29,15 @@
           const productPage = parser.parseFromString(data, 'text/html')
 
           if (!isProductDeliverable(productPage)) {
-            const productTitle = productLink.querySelector('span')
-            productTitle.classList.add('shp-not-deliverable-product')
+            const productItem = productTitle.closest('.s-result-item, .s-inner-result-item')
+            productItem.classList.add('shp-not-deliverable-product')
           }
 
           const availableFromOtherSellers = getAvailableFromOtherSellers(productPage)
           if (availableFromOtherSellers) {
+            const productTitleContainer = productTitle.closest('.a-section')
             const sellersMessage = createSellersMessage(availableFromOtherSellers.innerHTML)
-            productLink.parentElement.parentElement.after(sellersMessage)
+            productTitleContainer.after(sellersMessage)
           }
         })
         .finally(() => loader.remove())
@@ -42,7 +45,7 @@
   }
 
   function getProductLinks() {
-    return document.querySelectorAll('h2 a.a-link-normal.a-text-normal')
+    return document.querySelectorAll('.s-result-item h2 a')
   }
 
   function createLoader() {
