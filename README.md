@@ -1,18 +1,22 @@
-# Send here please!
+# SendHerePlz - Amazon shipment availability checker
 
 [![Logo SendHerePlz](img/sendhereplz-logo-128.png)](img/sendhereplz-logo.png)
 
-This is a _Chrome Extension_ to identify non-eligible products on **Amazon** because they are not sent to some locations. In this case, we live at [Canary Islands](https://en.wikipedia.org/wiki/Canary_Islands) and unfortunately there are a lot of Amazon products that they do not send here. Furthermore there is no choice to filter those products which are eligible.
+This is a **Chrome Extension** with one clear aim: **"Highlight non-eligible Amazon items because of shipment reasons"**.
 
-> This extension provides a way to highlight and cross out the non-eligible products for sending reasons.
+Have you ever spend hours looking for items on Amazon sites but none of them were available for shipment to your location? With this extension you will be able to detect these items from the results page, so you can easily identify which products are eligible for you.
 
-![Screen capture of the extension in use](img/screen-capture.png)
+## Features
 
-This project is a fork from the original _SendHerePlz_ project developed by Micael Martín ([@micaelcometa](https://github.com/micaelcometa)) at [Desarrollo Cometa](https://desarrollocometa.com):
-
-![Desarrollo Cometa](img/cometa-logo.png)
+- Highlight and cross out the non-eligible items (within the results page) because of shipment reasons.
+- Add a badge for each item (within the results page) which is only available through other sellers.
+- It works with any Amazon site regardless of the language you use.
 
 ## Installation
+
+### User mode
+
+Just add it to your Chrome browser from [our page on the Chrome Web Store](https://chrome.google.com/webstore/detail/sendhereplz/anpeeogkdbgkhakjldceemkolhggobhd).
 
 ### Developer mode
 
@@ -25,22 +29,24 @@ This project is a fork from the original _SendHerePlz_ project developed by Mica
 - Click on **Load unpacked**. (_"Cargar descomprimida"_ in spanish)
 - Select the folder from the location where the extension was saved.
 
-### Chrome Web Store
-
-Shortly.
-
 ## Usage
 
-Now you can browse in Amazon, search for your dreamy products and check quickly those which are not being sent to your location.
+You can check the behaviour of the extension with this video:
 
-![Happy momento](https://media.giphy.com/media/WsKVAem02Efuw/giphy.gif)
+![Screen Recording](img/screen-recording.gif)
 
-## Disclaimer
+Note that:
 
-Currently the extension only works for:
+- First item is crossed out because Amazon does not ship it to your location.
+- Second item is kept as usual because it is fully eligible (in terms of shipment).
+- Third item has a new badge below to indicate that it is only available from other sellers.
 
-- [amazon.es](https://amazon.es)
-- [amazon.com](https://amazon.com)
-- [amazon.it](https://amazon.it)
+## Feedback
 
-It can be extended for other languages/countries.
+If you want to give us any feedback you are very welcome [to add a new issue](https://github.com/sdelquin/sendhereplz/issues).
+
+## Former
+
+This project is a fork from the original _SendHerePlz_ project developed by Micael Martín ([@micaelcometa](https://github.com/micaelcometa)) at [Desarrollo Cometa](https://desarrollocometa.com):
+
+![Desarrollo Cometa](img/cometa-logo.png)
