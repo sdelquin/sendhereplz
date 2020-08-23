@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "SendHerePlz",
   "description": "Check if Amazon sends to your address from the list of products",
-  "version": "1.5",
+  "version": "1.5.1",
   "content_scripts": [
     {
       "matches": [
