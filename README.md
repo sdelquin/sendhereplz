@@ -43,7 +43,7 @@ Note that:
 
 - First item is crossed out because Amazon does not ship it to your location.
 - Second item is kept as usual because it is fully eligible (in terms of shipment).
-- Third item has a new badge below to indicate that it is only available for other sellers.
+- Third item has a new badge below to indicate that it is only available from other sellers.
 
 ## Former
 
