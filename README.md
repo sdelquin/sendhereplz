@@ -29,10 +29,6 @@ Just add it to your Chrome browser from [our page on the Chrome Web Store](https
 - Click on **Load unpacked**. (_"Cargar descomprimida"_ in spanish)
 - Select the folder from the location where the extension was saved.
 
-#### Feedback
-
-If you want to give us any feedback you are very welcome [to add a new issue](https://github.com/sdelquin/sendhereplz/issues).
-
 ## Usage
 
 You can check the behaviour of the extension with this video:
@@ -44,6 +40,10 @@ Note that:
 - First item is crossed out because Amazon does not ship it to your location.
 - Second item is kept as usual because it is fully eligible (in terms of shipment).
 - Third item has a new badge below to indicate that it is only available from other sellers.
+
+## Feedback
+
+If you want to give us any feedback you are very welcome [to add a new issue](https://github.com/sdelquin/sendhereplz/issues).
 
 ## Former
 
