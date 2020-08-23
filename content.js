@@ -1,13 +1,4 @@
 (function () {
-  const targetProducts = ['h2 a.a-link-normal.a-text-normal']
-  const notDeliverMessages = [
-    'no puede ser enviado',
-    'no hay vendedores que realicen envíos a',
-    'no realiza envíos a',
-    'no puede enviarse',
-    'cannot be shipped',
-    'non può essere spedito',
-  ]
   const parser = new DOMParser()
 
   ready(function () {
@@ -23,22 +14,11 @@
     }
   }
 
-  function createLoader() {
-    const loader = document.createElement('span')
-
-    loader.classList.add('shp-loader')
-    loader.innerText = 'Loading...'
-
-    return loader
-  }
-
   function checkProducts() {
     console.log('SendHerePlz is making its magic...')
 
-    document.querySelectorAll(targetProducts.toString()).forEach(productLink => {
+    getProductLinks().forEach(productLink => {
       const loader = createLoader()
-      const removeLoader = () => loader.remove()
-
       productLink.parentElement.prepend(loader)
 
       fetch(productLink.getAttribute('href'))
@@ -46,8 +26,7 @@
         .then(data => {
           const productPage = parser.parseFromString(data, 'text/html')
 
-          const isNotDeliverable = notDeliverMessages.some(message => data.includes(message))
-          if (isNotDeliverable) {
+          if (!isProductDeliverable(productPage)) {
             const productTitle = productLink.querySelector('span')
             productTitle.classList.add('shp-not-deliverable-product')
           }
@@ -58,8 +37,28 @@
             productLink.parentElement.parentElement.after(sellersMessage)
           }
         })
-        .finally(removeLoader)
+        .finally(() => loader.remove())
     })
+  }
+
+  function getProductLinks() {
+    return document.querySelectorAll('h2 a.a-link-normal.a-text-normal')
+  }
+
+  function createLoader() {
+    const loader = document.createElement('span')
+
+    loader.classList.add('shp-loader')
+    loader.innerText = 'Loading...'
+
+    return loader
+  }
+
+  function isProductDeliverable(page) {
+    return !page.querySelector(`
+      #ddmDeliveryMessage .a-color-error,
+      #deliveryMessageMirId .a-color-error
+    `)
   }
 
   function getAvailableFromOtherSellers(page) {
