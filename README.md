@@ -1,4 +1,4 @@
-# SendHerePlz - Amazon shipment availability checker
+# SendHerePlz - Amazon shipment availability
 
 [![Logo SendHerePlz](img/sendhereplz-logo-128.png)](img/sendhereplz-logo.png)
 
