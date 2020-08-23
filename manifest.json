@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "SendHerePlz",
-  "description": "Check if Amazon sends to your address from the list of products",
+  "name": "SendHerePlz - Amazon shipment availability checker",
+  "description": "Highlight non-eligible Amazon items because of shipment reasons",
   "version": "1.5.1",
   "content_scripts": [
     {
