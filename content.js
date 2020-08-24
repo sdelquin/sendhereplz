@@ -47,7 +47,12 @@
   }
 
   function getProductLinks() {
-    return document.querySelectorAll('.s-result-item h2 a')
+    return Array
+      .from(document.querySelectorAll('.s-result-item h2 a'))
+      .filter(productLink => {
+        const isProductVisible = !productLink.closest('.aok-hidden, .a-hidden')
+        return isProductVisible
+      })
   }
 
   function createLoader() {
