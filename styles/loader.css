@@ -1,10 +1,12 @@
 .shp-loader {
   display: inline-block;
-  vertical-align: bottom;
-  font-size: 2px;
   text-indent: -9999em;
-  width: 9em;
-  height: 9em;
+  font-size: 1rem;
+  width: 1.06em;
+  height: 1.06em;
+  line-height: 1em;
+  margin-left: 1px;
+  margin-right: 0.25rem;
   border-radius: 50%;
   background: #f56c42;
   background: linear-gradient(to right, #f56c42 10%, rgba(245, 108, 66, 0) 42%);
