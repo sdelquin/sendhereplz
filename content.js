@@ -42,7 +42,12 @@
   }
 
   function getProductLinks() {
-    return document.querySelectorAll('h2 a.a-link-normal.a-text-normal')
+    return Array
+      .from(document.querySelectorAll('h2 a.a-link-normal.a-text-normal'))
+      .filter(productLink => {
+        const isProductVisible = !productLink.closest('.aok-hidden, .a-hidden')
+        return isProductVisible
+      })
   }
 
   function createLoader() {
