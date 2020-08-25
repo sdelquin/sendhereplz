@@ -1,16 +1,10 @@
 const parser = new DOMParser()
 
-ready(() => {
+init()
+
+function init() {
   checkProducts(getVisibleProductItems())
   observeNewProducts()
-})
-
-function ready(fn) {
-  if (document.readyState !== 'loading') {
-    fn()
-  } else {
-    document.addEventListener('DOMContentLoaded', fn)
-  }
 }
 
 function getVisibleProductItems() {
