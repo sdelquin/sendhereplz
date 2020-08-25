@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "SendHerePlz - Amazon shipment availability",
-  "description": "Highlight non-eligible Amazon items because of shipment reasons",
-  "version": "1.5.1",
+  "name": "SendHerePlz - Amazon shipping availability",
+  "description": "Quick identification of Amazon products with shipping restrictions",
+  "version": "1.6.0",
   "content_scripts": [
     {
       "matches": [
