@@ -18,8 +18,10 @@
     console.log('SendHerePlz is making its magic...')
 
     getProductLinks().forEach(productLink => {
+      const productTitle = productLink.closest('h2')
+
       const loader = createLoader()
-      productLink.parentElement.prepend(loader)
+      productTitle.prepend(loader)
 
       fetch(productLink.getAttribute('href'))
         .then(response => response.text())
@@ -27,14 +29,17 @@
           const productPage = parser.parseFromString(data, 'text/html')
 
           if (!isProductDeliverable(productPage)) {
-            const productTitle = productLink.querySelector('span')
-            productTitle.classList.add('shp-not-deliverable-product')
+            const productItem = productTitle.closest('.s-result-item, .s-inner-result-item')
+            productItem.classList.add('shp-not-deliverable-product')
+
+            productTitle.prepend(createNotDeliverableIndicator())
           }
 
           const availableFromOtherSellers = getAvailableFromOtherSellers(productPage)
           if (availableFromOtherSellers) {
+            const productTitleContainer = productTitle.closest('.a-section')
             const sellersMessage = createSellersMessage(availableFromOtherSellers.innerHTML)
-            productLink.parentElement.parentElement.after(sellersMessage)
+            productTitleContainer.after(sellersMessage)
           }
         })
         .finally(() => loader.remove())
@@ -43,7 +48,7 @@
 
   function getProductLinks() {
     return Array
-      .from(document.querySelectorAll('h2 a.a-link-normal.a-text-normal'))
+      .from(document.querySelectorAll('.s-result-item h2 a'))
       .filter(productLink => {
         const isProductVisible = !productLink.closest('.aok-hidden, .a-hidden')
         return isProductVisible
@@ -64,6 +69,14 @@
       #ddmDeliveryMessage .a-color-error,
       #deliveryMessageMirId .a-color-error
     `)
+  }
+
+  function createNotDeliverableIndicator() {
+    const notDeliverableIndicator = document.createElement('span')
+    notDeliverableIndicator.classList.add('shp-not-deliverable-product-icon')
+    notDeliverableIndicator.innerHTML = '<svg fill-rule="evenodd" height="100%" stroke-linejoin="round" viewBox="0 0 865 794" width="100%"><path d="m668.2 253.5c8.9 2.7 17.1 7.6 23.8 14.3l118.1 118.1c10.6 10.6 16.7 25.1 16.7 40.1v127.8h18.9c10.4 0 18.9 8.5 18.9 18.9v37.8c0 10.4-8.5 18.9-18.9 18.9h-56.8c0 62.7-50.8 113.5-113.5 113.5s-113.5-50.8-113.5-113.5h-151.4c0 62.7-50.8 113.5-113.5 113.5-32.6 0-61.9-13.7-82.6-35.7l40.2-40.2c10.4 11.8 25.5 19.2 42.4 19.2 31.3 0 56.8-25.4 56.8-56.8 0-16.9-7.4-32.1-19.2-42.4l265.1-265.1v118.4h170.3v-14.3l-118.1-118.1h-38.1l54.3-54.3zm7.3 432.7c-31.3 0-56.8-25.4-56.8-56.8 0-31.3 25.4-56.8 56.8-56.8 31.3 0 56.8 25.4 56.8 56.8 0 31.3-25.4 56.8-56.8 56.8zm-148.1-548.7-419.5 419.5v-362.7c0-31.3 25.4-56.8 56.8-56.8h362.8zm249.7-59.1c9-9 9-23.5 0-32.5-9.2-9.2-20.5-20.5-29.7-29.7-9-9-23.5-9-32.5 0-97.2 97.2-601.5 601.5-698.7 698.7-9 9-9 23.5 0 32.5l29.7 29.7c9 9 23.5 9 32.5 0 97.2-97.2 601.5-601.5 698.7-698.7z"/></svg>'
+
+    return notDeliverableIndicator
   }
 
   function getAvailableFromOtherSellers(page) {
