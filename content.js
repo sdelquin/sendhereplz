@@ -51,7 +51,7 @@ function ProductItem(container) {
   loader.innerText = 'Loading...'
 
   return {
-    getProductUrl: () => productLink.getAttribute('href'),
+    getProductUrl: () => new URL(productLink.getAttribute('href'), window.location),
 
     isVisible: () => !container.closest('.aok-hidden, .a-hidden'),
 
