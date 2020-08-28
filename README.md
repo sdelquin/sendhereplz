@@ -2,9 +2,9 @@
 
 [![Logo SendHerePlz](img/sendhereplz-logo-128.png)](img/sendhereplz-logo.png)
 
-This is a **Chrome Extension** with one clear aim: **"Quick identification of Amazon products with shipping restrictions"**.
+**Quick identification of Amazon products with shipping restrictions**
 
-Have you ever spend hours looking for items on Amazon sites but none of them were available for shipping to your location? With this extension you will be able to detect these items quickly from the results page, so you can easily identify which products are eligible for you.
+Have you ever spend hours looking for items on Amazon sites but none of them were available for shipping to your location? With this **browser extension** you will be able to detect these items quickly from the results page, so you can easily identify which products are eligible for you.
 
 ## Features
 
@@ -14,20 +14,33 @@ Have you ever spend hours looking for items on Amazon sites but none of them wer
 
 ## Installation
 
-### User mode
-
-Just add it to your Chrome browser from [our page on the Chrome Web Store](https://chrome.google.com/webstore/detail/sendhereplz/anpeeogkdbgkhakjldceemkolhggobhd).
+[![Chrome Web-Store](img/chrome-webstore-200.png)](https://chrome.google.com/webstore/detail/sendhereplz/anpeeogkdbgkhakjldceemkolhggobhd)
+&nbsp;&nbsp;
+![Mozilla Add-Ons](img/mozilla-addons-200.png)
 
 ### Developer mode
+
+#### Google Chrome
 
 - [Download](https://github.com/sdelquin/sendhereplz/archive/master.zip) the project.
 - Uncompress the `.zip` file (a folder named `sendhereplz-master` is created).
 - Place the folder where you want to keep it (write down this location).
 - Open [Chrome](https://www.google.com/intl/es_es/chrome/) browser.
 - Go to `chrome://extensions/` on navigation bar.
-- Check the box for **Developer Mode** in the top right. (_"Modo desarrollador"_ in spanish)
-- Click on **Load unpacked**. (_"Cargar descomprimida"_ in spanish)
+- Check the box for **Developer Mode** in the top right.
+- Click on **Load unpacked**.
 - Select the folder from the location where the extension was saved.
+
+#### Mozilla Firefox
+
+- [Download](https://github.com/sdelquin/sendhereplz/archive/master.zip) the project.
+- Uncompress the `.zip` file (a folder named `sendhereplz-master` is created).
+- Place the folder where you want to keep it (write down this location).
+- Open [Firefox](https://www.mozilla.org/firefox/new/) browser.
+- Go to `about:debugging` on navigation bar.
+- Click on **This Firefox** on the left panel.
+- Click on **Load Temporary Add-on...** on the right hand side.
+- Select [manifest.json](manifest.json) from the location where the extension was saved.
 
 ## Usage
 
