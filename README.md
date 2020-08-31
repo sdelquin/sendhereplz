@@ -16,7 +16,7 @@ Have you ever spend hours looking for items on Amazon sites but none of them wer
 
 [![Chrome Web-Store](img/chrome-webstore-200.png)](https://chrome.google.com/webstore/detail/sendhereplz/anpeeogkdbgkhakjldceemkolhggobhd)
 &nbsp;&nbsp;
-![Mozilla Add-Ons](img/mozilla-addons-200.png)
+[![Mozilla Add-Ons](img/mozilla-addons-200.png)](https://addons.mozilla.org/es/firefox/addon/sendhereplz/)
 
 ### Developer mode
 
