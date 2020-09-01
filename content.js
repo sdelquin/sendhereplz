@@ -86,9 +86,10 @@ function Product(container) {
   return {
     isDeliverable: () => {
       return !container.querySelector(`
-          #ddmDeliveryMessage .a-color-error,
-          #deliveryMessageMirId .a-color-error
-        `)
+        #deliveryMessageMirId .a-color-error,
+        #qualifiedBuybox #ddmDeliveryMessage .a-color-error,
+        .a-accordion-active #ddmDeliveryMessage .a-color-error
+      `)
     },
 
     isAvailableFromOtherSellers: () => Boolean(availableFromOtherSellers),
