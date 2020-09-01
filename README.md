@@ -1,6 +1,8 @@
 # SendHerePlz - Amazon shipping availability
 
-[![Logo SendHerePlz](img/sendhereplz-logo-128.png)](img/sendhereplz-logo.png)
+<a href="img/sendhereplz-logo.svg">
+<img width="128" src="img/sendhereplz-logo.svg" alt="Logo SendHerePlz">
+</a>
 
 **Quick identification of Amazon products with shipping restrictions**
 
@@ -14,9 +16,13 @@ Have you ever spend hours looking for items on Amazon sites but none of them wer
 
 ## Installation
 
-[![Chrome Web-Store](img/chrome-webstore-200.png)](https://chrome.google.com/webstore/detail/sendhereplz/anpeeogkdbgkhakjldceemkolhggobhd)
+<a href="https://chrome.google.com/webstore/detail/sendhereplz/anpeeogkdbgkhakjldceemkolhggobhd">
+<img height="45" src="img/chrome-webstore.svg" alt="Chrome Web-Store">
+</a>
 &nbsp;&nbsp;
-[![Mozilla Add-Ons](img/mozilla-addons-200.png)](https://addons.mozilla.org/es/firefox/addon/sendhereplz/)
+<a href="https://addons.mozilla.org/es/firefox/addon/sendhereplz/">
+<img height="45" src="img/mozilla-addons.svg" alt="Mozilla Add-Ons">
+</a>
 
 ### Developer mode
 
@@ -62,4 +68,4 @@ If you want to give us any feedback you are very welcome [to add a new issue](ht
 
 This project is a fork from the original _SendHerePlz_ project developed by Micael Martín ([@micaelcometa](https://github.com/micaelcometa)) at [Desarrollo Cometa](https://desarrollocometa.com):
 
-![Desarrollo Cometa](img/cometa-logo.png)
+![Desarrollo Cometa](img/cometa-logo.svg)
