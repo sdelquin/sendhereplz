@@ -6,6 +6,7 @@
   "content_scripts": [
     {
       "matches": [
+        "https://smile.amazon.com/*",
         "https://www.amazon.ae/*",
         "https://www.amazon.ca/*",
         "https://www.amazon.cn/*",
