@@ -23,6 +23,10 @@ Have you ever spend hours looking for items on Amazon sites but none of them wer
 <a href="https://addons.mozilla.org/es/firefox/addon/sendhereplz/">
 <img height="45" src="img/mozilla-addons.svg" alt="Mozilla Add-Ons">
 </a>
+&nbsp;&nbsp;
+<a href="https://microsoftedge.microsoft.com/addons/detail/sendhereplz-amazon-ship/bdfbmfojnplfbblihocncebdocmibofi">
+<img height="45" src="img/edge-addons.svg" alt="Mozilla Add-Ons">
+</a>
 
 ### Developer mode
 
