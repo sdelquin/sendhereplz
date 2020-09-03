@@ -17,15 +17,15 @@ Have you ever spend hours looking for items on Amazon sites but none of them wer
 ## Installation
 
 <a href="https://chrome.google.com/webstore/detail/sendhereplz/anpeeogkdbgkhakjldceemkolhggobhd">
-<img height="45" src="img/chrome-webstore.svg" alt="Chrome Web-Store">
+<img height="45" src="img/chrome-webstore.svg" alt="Google Chrome Web-Store">
 </a>
 &nbsp;&nbsp;
-<a href="https://addons.mozilla.org/es/firefox/addon/sendhereplz/">
-<img height="45" src="img/mozilla-addons.svg" alt="Mozilla Add-Ons">
+<a href="https://addons.mozilla.org/firefox/addon/sendhereplz/">
+<img height="45" src="img/mozilla-addons.svg" alt="Mozilla Firefox Add-Ons">
 </a>
 &nbsp;&nbsp;
 <a href="https://microsoftedge.microsoft.com/addons/detail/sendhereplz-amazon-ship/bdfbmfojnplfbblihocncebdocmibofi">
-<img height="45" src="img/edge-addons.svg" alt="Mozilla Add-Ons">
+<img height="45" src="img/edge-addons.svg" alt="Microsoft Edge Add-Ons">
 </a>
 
 ### Developer mode
