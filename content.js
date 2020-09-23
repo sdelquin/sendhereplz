@@ -86,9 +86,10 @@ function Product(container) {
   return {
     isDeliverable: () => {
       return !container.querySelector(`
-        #deliveryMessageMirId .a-color-error,
-        #qualifiedBuybox #ddmDeliveryMessage .a-color-error,
-        .a-accordion-active #ddmDeliveryMessage .a-color-error
+        #centerCol #ddmDeliveryMessage .a-color-error,
+        #centerCol #deliveryMessageMirId .a-color-error,
+        #rightCol #qualifiedBuybox #ddmDeliveryMessage .a-color-error,
+        #rightCol .a-accordion-active #ddmDeliveryMessage .a-color-error
       `)
     },
 
