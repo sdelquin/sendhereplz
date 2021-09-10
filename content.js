@@ -90,8 +90,10 @@ function Product(container) {
         #centerCol #deliveryMessageMirId .a-color-error,
         #rightCol #qualifiedBuybox #ddmDeliveryMessage .a-color-error,
         #rightCol #qualifiedBuybox #mir-layout-DELIVERY_BLOCK-slot-DELIVERY_MESSAGE .a-color-error,
+        #rightCol #qualifiedBuybox #mir-layout-DELIVERY_BLOCK-slot-PRIMARY_DELIVERY_MESSAGE_LARGE .a-color-error,
         #rightCol .a-accordion-active #ddmDeliveryMessage .a-color-error,
-        #rightCol .a-accordion-active #mir-layout-DELIVERY_BLOCK-slot-DELIVERY_MESSAGE .a-color-error
+        #rightCol .a-accordion-active #mir-layout-DELIVERY_BLOCK-slot-DELIVERY_MESSAGE .a-color-error,
+        #rightCol .a-accordion-active #mir-layout-DELIVERY_BLOCK-slot-PRIMARY_DELIVERY_MESSAGE_LARGE .a-color-error
       `)
     },
 
