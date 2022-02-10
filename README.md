@@ -64,6 +64,19 @@ Note that:
 - Second item is shaded and it has a new icon since Amazon does not ship it to your location.
 - Third item is kept as usual because it is fully eligible (in terms of shipping).
 
+## Hide unshippable items
+
+We think that hiding unshippable items would be too intrusive for the final user. There is a way you can achieve this though:
+
+- Install uBlock Origin extension (available for multiple browsers).
+- Add the following code to "My filters" panel:
+  ```
+  amazon.com##div[class*="shp-not-deliverable-product"]
+  ```
+  Just replace `.com` with the extension of Amazon you're using.
+
+> 💡 &nbsp;Thank you MickyFoley2 for [this trick](https://github.com/sdelquin/sendhereplz/issues/37#issuecomment-1034233190).
+
 ## Feedback
 
 If you want to give us any feedback you are very welcome [to add a new issue](https://github.com/sdelquin/sendhereplz/issues).
