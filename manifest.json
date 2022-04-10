@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "SendHerePlz - Amazon shipping availability",
   "description": "Quick identification of Amazon products with shipping restrictions",
-  "version": "1.9.4",
+  "version": "1.9.5",
   "content_scripts": [
     {
       "matches": [
