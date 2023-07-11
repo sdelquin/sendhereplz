@@ -88,6 +88,7 @@ function Product(container) {
       return !container.querySelector(`
         #centerCol #ddmDeliveryMessage .a-color-error,
         #centerCol #deliveryMessageMirId .a-color-error,
+        #rightCol #unqualifiedBuyBox #buybox-see-all-buying-choices,
         #rightCol #qualifiedBuybox #ddmDeliveryMessage .a-color-error,
         #rightCol #qualifiedBuybox #mir-layout-DELIVERY_BLOCK-slot-DELIVERY_MESSAGE .a-color-error,
         #rightCol #qualifiedBuybox #mir-layout-DELIVERY_BLOCK-slot-PRIMARY_DELIVERY_MESSAGE_LARGE .a-color-error,
