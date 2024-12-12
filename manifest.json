@@ -37,5 +37,10 @@
   },
   "icons": {
     "128": "img/sendhereplz-logo-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hello@sendhereplz.com"
+    }
   }
 }
