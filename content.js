@@ -101,7 +101,7 @@ function Product(container) {
       `)
     },
 
-    isAvailableFromOtherSellers: () => Boolean(availableFromOtherSellers),
+    isAvailableFromOtherSellers: () => Boolean(availableFromOtherSellers) && availableFromOtherSellers.textContent.trim() !== '',
     getSellersMessage: () => availableFromOtherSellers.innerHTML
   }
 }
