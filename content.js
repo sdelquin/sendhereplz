@@ -9,9 +9,9 @@ function init() {
 
 function getVisibleProductItems() {
   return Array
-    .from(document.querySelectorAll('.s-result-item h2 a'))
-    .map(productLink => {
-      const productContainer = productLink.closest('.s-result-item, .s-inner-result-item')
+    .from(document.querySelectorAll('.s-result-item .s-title-instructions-style h2'))
+    .map(productTitle => {
+      const productContainer = productTitle.closest('.s-result-item, .s-inner-result-item')
       return ProductItem(productContainer)
     })
     .filter(productItem => productItem.isVisible())
@@ -42,9 +42,9 @@ function checkProducts(productItems) {
 }
 
 function ProductItem(container) {
-  const productTitle = container.querySelector('h2')
+  const productTitle = container.querySelector('.s-title-instructions-style h2')
   const productTitleContainer = productTitle.closest('.a-section')
-  const productLink = container.querySelector('h2 a')
+  const productLink = container.querySelector('.s-title-instructions-style a')
 
   const loader = document.createElement('span')
   loader.classList.add('shp-loader')
