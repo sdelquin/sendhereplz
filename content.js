@@ -44,7 +44,7 @@ function checkProducts(productItems) {
 function ProductItem(container) {
   const productTitle = container.querySelector('.s-title-instructions-style h2')
   const productTitleContainer = productTitle.closest('.a-section')
-  const productLink = container.querySelector('.s-title-instructions-style a')
+  const productLink = container.querySelector('.s-title-instructions-style a:has(h2)')
 
   const loader = document.createElement('span')
   loader.classList.add('shp-loader')
